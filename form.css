@@ -1,0 +1,27 @@
+
+
+input, label {
+    height: max-content;
+    font-size: x-large;
+    margin: 1vh 0;
+}
+
+
+
+.options {
+    border: 1px solid black;
+    width: fit-content;
+    
+    margin: 5px  10px 5px 0;
+    padding: 3px 6px;
+    float: left;
+}
+
+.submit {
+    margin: .75vh 0 0 0;
+}
+.blue {
+    width:44px;
+    height:44px;
+    background-color: blue;
+}
