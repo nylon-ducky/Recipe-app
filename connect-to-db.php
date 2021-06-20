@@ -2,6 +2,7 @@
 $servername = "localhost";
 $username = "zgranny";
 $password = "eq86npZf/UymSced";
+$dbname = "a11y";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -14,12 +15,12 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 
 // Select database
-$conn -> select_db("a11y");
+$conn -> select_db($dbname);
 
 // Check database
 if ($result = $conn -> query("SELECT DATABASE()")) {
     $row = $result -> fetch_row();
-    echo "Default database is " . $row[0];
+    echo " Default database is " . $row[0] . " let's get started!";
     $result -> close();
   }
 
