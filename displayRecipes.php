@@ -8,10 +8,10 @@
         while($row = mysqli_fetch_assoc($result)) {
             echo 
             '<div class="recipeCard">' 
-            . $row['title'] . '<br/>'
-            . $row['description'] . '<br/>'
-            . 'Ingredients: ' . $row['ingredients'] . '<br/>'
-            . 'Instructions: ' . $row['instructions'] . '</div>';
+            . '<h6 class="titles">' . $row['title'] . '</h6>'
+            . '<p class="descriptions">' . $row['description'] . '</p>'
+            . '<p class="ingredients">' . 'Ingredients: ' . $row['ingredients'] . '</p>'
+            . '<p class="instructions">' .  'Instructions: ' . $row['instructions'] . '</p>' . '</div>';
         }
 
     } else {

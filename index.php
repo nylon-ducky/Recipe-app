@@ -17,7 +17,7 @@ require 'connect-to-db.php';
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- MY STYLE -->
-    <link rel="stylesheet" href="style.php" media="screen">
+    <link defer rel="stylesheet" type="text/css" href="style.php" media="screen">
 
     <!-- TITLE -->
     <title>My A11Y Recipe</title>
@@ -45,11 +45,12 @@ require 'connect-to-db.php';
         <a href="addRecipe.php">Add Recipe</a>
     </nav>
 
-
-    <?php
+    <!-- RECIPES -->
+    <div class="main">
+        <?php
         include 'displayRecipes.php';
-    ?>
-
+        ?>
+    </div>
 
 </body>
 

@@ -12,7 +12,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-echo "Connected successfully";
+echo "<p class='noshow'>Connected successfully</p>";
 
 // Select database
 $conn -> select_db($dbname);
