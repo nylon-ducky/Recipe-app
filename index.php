@@ -17,8 +17,11 @@ require 'connect-to-db.php';
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- MY STYLE -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.php" media="screen">
+
+    <!-- TITLE -->
     <title>My A11Y Recipe</title>
+
 </head>
 
 <body>
@@ -28,8 +31,10 @@ require 'connect-to-db.php';
     <i class="fas fa-bars" id="bm"></i>
 
     <!-- SEARCH BAR -->
-    <input type="text" name="sBar" id="sBar">
-    <button name="sButton">Search</button>
+    <div id="searchGroup">
+        <input type="text" name="sBar" id="sBar">
+        <button name="sButton">Search</button>
+    </div>
 
     <!-- SHOPPING CART -->
     <i class="fas fa-shopping-cart" id="cart"></i>

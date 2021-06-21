@@ -6,7 +6,12 @@
 
     if(mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
-            echo "<br/><br/>" . $row['title'] . "<br/>" . $row['description'] . "<br/>" . "Ingredients: " . $row['ingredients'] . "<br/>" . "Instructions: " . $row['instructions'] . "<br/>" . "<br/><br/><br/>" ;
+            echo 
+            '<div class="recipeCard">' 
+            . $row['title'] . '<br/>'
+            . $row['description'] . '<br/>'
+            . 'Ingredients: ' . $row['ingredients'] . '<br/>'
+            . 'Instructions: ' . $row['instructions'] . '</div>';
         }
 
     } else {

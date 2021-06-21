@@ -20,7 +20,6 @@ $conn -> select_db($dbname);
 // Check database
 if ($result = $conn -> query("SELECT DATABASE()")) {
     $row = $result -> fetch_row();
-    echo " Default database is " . $row[0] . " let's get started! <br/> ";
     $result -> close();
   }
 
