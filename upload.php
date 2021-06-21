@@ -1,5 +1,6 @@
 <?php
 require 'connect-to-db.php';
+
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
@@ -20,9 +21,9 @@ if (mysqli_query($conn, $sql)) {
   mysqli_close($conn);
  
 /*
-$target_dir = "recipes/";
-$target_file = $target_dir . basename($_FILES[$img]["name"]);
-?>
+BUG LIST:
+    cant use apostrophie in the query data.
+
 
 
 http://localhost/projects/a11y/a11y/upload.php
@@ -32,3 +33,21 @@ https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/
 https://makitweb.com/make-destination-directory-on-file-upload-with-php/
 */
  ?>
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Recipe Added</title>
+ </head>
+ <body>
+     <!-- NAV BAR -->
+     <nav>
+        <a href="index.php">Home</a>
+        <a href="addRecipe.php">Add Recipe</a>
+    </nav>
+   <p>Thanks for contributing!</p>
+ </body>
+ </html>
