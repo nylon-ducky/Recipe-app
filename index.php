@@ -24,11 +24,11 @@ require 'connect-to-db.php';
 
 </head>
 
-<body>
+<body id="home">
 
 
     <!-- BURGER MENU -->
-    <i class="fas fa-bars" id="bm"></i>
+    <i class="fas fa-bars noshow" id="bm"></i>
 
     <!-- SEARCH BAR -->
     <div id="searchGroup">
@@ -44,6 +44,12 @@ require 'connect-to-db.php';
         <a href="index.php">Home</a>
         <a href="addRecipe.php">Add Recipe</a>
     </nav>
+
+    <div class="holder">
+        
+        <img class="chef" src="https://www.reshot.com/preview-assets/illustrations/5SL8QE7BTV/chefs-preparing-pizza-5SL8QE7BTV-w1600.jpg"> 
+        <p class="left">May all your culinary dreams come true!</p>
+    </div>
 
     <!-- RECIPES -->
     <div class="main">

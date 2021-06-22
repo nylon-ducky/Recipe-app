@@ -7,10 +7,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-}
-
-#bm {
-    display: none;
+    overflow-x: hidden;
 }
 
 .noshow {
@@ -19,14 +16,43 @@ body {
 
 #searchGroup {
     height: 40px;
-    display: inline-block;
-    margin: auto;
+    width: fit-content; 
+    margin: 10px auto;
+}
+
+#cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 nav {
     display: flex;
     justify-content: space-evenly;
+    margin: 15px;
 }
+
+.chef {
+    position: relative;
+    width: 800px;
+    margin: 0;
+    float: right;
+}
+.holder {
+    width: 98.2vw;
+    height: 465px;
+    margin: 0;
+    background-color: rgb(225,81,11);
+    border: 7px solid rgb(225,81,11);
+}
+.left {
+    font-family: "Brush Script MT", cursive;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+/* RECIPES */
 
 .recipeCard {
     margin: 4vw; 
