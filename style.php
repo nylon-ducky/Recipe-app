@@ -58,14 +58,15 @@ nav {
     margin: 4vw; 
     width: 40vw;
     border: 2px solid black;
+    border-radius: 25px;
     padding: 2vw;
     float: left;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 grey;
     transition: 0.2s;
 }
 
 .recipeCard:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 grey;
 }
 
 .titles {
@@ -77,3 +78,4 @@ nav {
     width: fit-content;
     margin: auto;
 }
+

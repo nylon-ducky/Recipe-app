@@ -48,7 +48,7 @@ require 'connect-to-db.php';
     <div class="holder">
         
         <img class="chef" src="https://www.reshot.com/preview-assets/illustrations/5SL8QE7BTV/chefs-preparing-pizza-5SL8QE7BTV-w1600.jpg"> 
-        <p class="left">May all your culinary dreams come true!</p>
+        <p class="left">Easy as pie!</p>
     </div>
 
     <!-- RECIPES -->

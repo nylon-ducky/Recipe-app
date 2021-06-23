@@ -5,10 +5,10 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
 
-$title = $_POST['title'];
-$ingredients = $_POST['ingredients'];
-$instructions = $_POST['instructions'];
-$description = $_POST['description'];
+$title = addslashes($_POST['title']);
+$ingredients = addslashes($_POST['ingredients']);
+$instructions = addslashes($_POST['instructions']);
+$description = addslashes($_POST['description']);
 
 $sql="INSERT INTO recipes (title, ingredients, instructions, description) VALUES ('$title', '$ingredients', '$instructions', '$description')";
 
@@ -22,12 +22,11 @@ if (mysqli_query($conn, $sql)) {
  
 /*
 BUG LIST:
-    cant use apostrophie in the query data.
 
 
 
-http://localhost/projects/a11y/a11y/upload.php
-http://localhost/phpmyadmin/index.php?route=/table/structure/save
+http://localhost/projects/a11y/a11y/index.php
+http://localhost/phpmyadmin/index.php?route=/table/structure
 https://www.tutorialrepublic.com/php-tutorial/php-mysql-insert-query.php
 https://www.geeksforgeeks.org/how-to-insert-form-data-into-database-using-php/
 https://makitweb.com/make-destination-directory-on-file-upload-with-php/
