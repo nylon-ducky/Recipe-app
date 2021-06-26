@@ -10,9 +10,10 @@
             echo 
             '<div class="recipeCard">' 
             . '<h6 class="titles">' . $row['title'] . '</h6>'
+            . '<img src="' . $row['picture'] . '" class="pics">'
             . '<p class="descriptions">' . $row['description'] . '</p>'
-            . '<p class="ingredients">' . 'Ingredients: ' . $row['ingredients'] . '</p>'
-            . '<p class="instructions">' .  'Instructions: ' . $row['instructions'] . '</p>' . '</div>';
+            . '<p class="ingredients">' . 'Ingredients: <br/> ' . $row['ingredients'] . '</p>'
+            . '<p class="instructions">' .  'Instructions: <br/> ' . $row['instructions'] . '</p>' . '</div>';
         
         }
             require 'deleteEmptyRows.php';

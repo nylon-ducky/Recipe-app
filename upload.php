@@ -3,14 +3,46 @@ require 'connect-to-db.php';
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
-  }
+}
+
 
 $title = addslashes($_POST['title']);
 $ingredients = addslashes($_POST['ingredients']);
 $instructions = addslashes($_POST['instructions']);
 $description = addslashes($_POST['description']);
 
-$sql="INSERT INTO recipes (title, ingredients, instructions, description) VALUES ('$title', '$ingredients', '$instructions', '$description')";
+$target = "pictures/";
+if(!is_dir($target)) mkdir($target);
+$target = $target . basename( $_FILES['pics']['name']); 
+
+$pics = $_FILES['pics'];
+$ufname = ($_FILES['pics']['name']);
+echo $target ;
+$tmpName  = $_FILES['pics']['tmp_name'];
+$ufSize = $_FILES['pics']['size'];
+$ufType = $_FILES['pics']['type'];
+$ufError = $_FILES['pics']['error'];
+$fp = fopen($tmpName, 'r');
+$content = fread($fp, filesize($tmpName));
+$content = addslashes($content);
+fclose($fp);
+
+  
+if(move_uploaded_file($_FILES['pics']['tmp_name'], $target)) { 
+
+  //Tells you if its all ok 
+ echo "The file ". basename( $_FILES['pics']['name']). " has been uploaded, and your information has been added to the directory. "; 
+} 
+   else { 
+ 
+          //Gives and error if its not 
+  echo "Sorry, there was a problem uploading your file."; 
+} 
+
+
+
+
+$sql="INSERT INTO recipes (title, picture, ingredients, instructions, description) VALUES ('$title', '$target' ,'$ingredients', '$instructions', '$description')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";

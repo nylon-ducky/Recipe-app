@@ -25,6 +25,13 @@
         <label for="title">Title:</label>
         <input type="text" id="title" name="title">
         <br />
+
+        <label for="photoinput">Photo:</label>
+        <!-- USER FILE (PHOTO) -->
+        <input type="hidden" name="max-file-size" value="30000">
+        <input type="file" name="pics" id="photoinput">
+        
+        <br/>
         <label for="ingredients">Ingredients</label><br />
         <textarea name="ingredients" rows="15" cols="30"></textarea><br />
         <label for="instructions">Instructions</label><br />

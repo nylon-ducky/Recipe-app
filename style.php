@@ -79,3 +79,8 @@ nav {
     margin: auto;
 }
 
+.pics {
+    width: 50px;
+    height: 50px;
+}
+
