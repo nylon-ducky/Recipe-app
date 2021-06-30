@@ -49,6 +49,7 @@ nav {
     font-family: "Brush Script MT", cursive;
     font-weight: bold;
     font-size: 40px;
+   
 }
 
 
@@ -57,13 +58,18 @@ nav {
 .recipeCard {
     margin: 4vw; 
     width: 40vw;
+    height: 45vh;
     border: 2px solid black;
     border-radius: 25px;
     padding: 2vw;
     float: left;
     box-shadow: 0 4px 8px 0 grey;
+    
     transition: 0.2s;
+    
+    
 }
+
 
 .recipeCard:hover {
   box-shadow: 0 8px 16px 0 grey;
@@ -72,6 +78,7 @@ nav {
 .titles {
     font-size: 30px;
     margin: 0;
+    text-align: center;
 }
 
 .main {
@@ -80,7 +87,11 @@ nav {
 }
 
 .pics {
-    width: 50px;
-    height: 50px;
+    width: 24vw;
+    height: 18vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
 }
 

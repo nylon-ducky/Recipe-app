@@ -23,7 +23,7 @@ if ($result = $conn -> query("SELECT DATABASE()")) {
     $result -> close();
 }
 
-phpinfo()
+
 
 
 ?>
