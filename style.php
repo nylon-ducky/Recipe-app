@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     width: 100vw;
     height: 100vh;
@@ -24,12 +25,29 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
+
+    width: 50px;
+    height: 40px;
+
+
 }
 
 nav {
     display: flex;
     justify-content: space-evenly;
-    margin: 15px;
+    margin: 15px 0;
+
+    background-color: rgb(225,81,11);
+
+    font-weight: bold;
+
+    padding: 5px;
+
+
+}
+
+nav a {
+    color: white;
 }
 
 .chef {
@@ -56,23 +74,29 @@ nav {
 /* RECIPES */
 
 .recipeCard {
-    margin: 4vw; 
-    width: 40vw;
-    height: 45vh;
+    margin: 4vw auto; 
+    width: 80vw;
+    height: 50vh;
     border: 2px solid black;
-    border-radius: 25px;
-    padding: 2vw;
-    float: left;
+    font-weight: bold;
+    padding: 2vw 2vw 0 2vw;
+    
     box-shadow: 0 4px 8px 0 grey;
     
     transition: 0.2s;
     
+    overflow: auto;
     
 }
 
 
+
 .recipeCard:hover {
-  box-shadow: 0 8px 16px 0 grey;
+  box-shadow: 0 0 16px 5px grey;
+  width: 82vw;
+  height: 52vh;
+  
+  font-size: 1.2em;
 }
 
 .titles {

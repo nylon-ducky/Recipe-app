@@ -8,7 +8,7 @@
         while($row = mysqli_fetch_assoc($result)) {
             
             echo 
-            '<div class="recipeCard">' 
+            '<div class="recipeCard" tabindex="0">' 
             . '<h6 class="titles">' . $row['title'] . '</h6>'
             . '<img src="' . $row['picture'] . '" class="pics">'
             . '<p class="descriptions">' . $row['description'] . '</p>'
