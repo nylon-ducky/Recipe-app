@@ -35,7 +35,7 @@ body {
 nav {
     display: flex;
     justify-content: space-evenly;
-    margin: 15px 0;
+    margin: 15px 0 0 0;
 
     background-color: rgb(225,81,11);
 
@@ -57,7 +57,7 @@ nav a {
     float: right;
 }
 .holder {
-    width: 98.2vw;
+    width: 99.1vw;
     height: 465px;
     margin: 0;
     background-color: rgb(225,81,11);

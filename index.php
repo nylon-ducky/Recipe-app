@@ -64,20 +64,21 @@ require 'connect-to-db.php';
     </div>
 
     <script>    
-        function readMore(eID) {
-
-        eID.style.height = "max-content";
-
-        }
-
-        function readLess(eID) {
-
-        eID.style.height = "45vh";
-
-        }
-
-    </script>
-
+fetch("https://edamam-recipe-search.p.rapidapi.com/search?q=chicken", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "f8cbcb031fmsh979210ec5d6e31ep1ffebajsn419b34dc4aac",
+		"x-rapidapi-host": "edamam-recipe-search.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response.json())
+    
+})
+.catch(err => {
+	console.error(err);
+});
+</script>
 </body>
 
 </html>
