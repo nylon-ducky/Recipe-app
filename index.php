@@ -22,7 +22,7 @@ require 'connect-to-db.php';
     <link defer rel="stylesheet" type="text/css" href="style.php" media="screen">
 
     <!-- MAIN SCRIPT 
-    <script defer src="app,js"></script>
+    <script src="app,js"></script>
     -->
     <!-- TITLE -->
     <title>My A11Y Recipe</title>
