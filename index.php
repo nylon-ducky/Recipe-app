@@ -24,6 +24,7 @@ require 'connect-to-db.php';
     <!-- MAIN SCRIPT 
     <script src="app,js"></script>
     -->
+    
     <!-- TITLE -->
     <title>My A11Y Recipe</title>
 
@@ -38,7 +39,7 @@ require 'connect-to-db.php';
     <!-- SEARCH BAR -->
     <div id="searchGroup">
         <input type="text" name="sBar" id="sBar">
-        <button name="sButton">Search</button>
+        <button name="sButton" onclick="getRecipes()" value="sButton" id="sButton">Search</button>
     </div>
 
     <!-- SHOPPING CART -->
@@ -64,10 +65,19 @@ require 'connect-to-db.php';
     </div>
 
     <script>    
+            let search = document.getElementById('sBar');
+
+            search.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+            event.preventDefault();
+            getRecipes();
+            }
+            });
 
     async function getRecipes() {
+        let search = document.getElementById('sBar').value;
 
-        let search = "chicken";
+
         const edamam = "https://edamam-recipe-search.p.rapidapi.com/search?q=" + search;
         const methodhead = {
 	    "method": "GET",
@@ -103,6 +113,7 @@ require 'connect-to-db.php';
             let picture = new Image;
             picture.classList.add("pics");
             picture.src = recipes.image;
+            picture.alt = search + " recipe from: " + recipes.url;
             E.appendChild(picture);
 
 
@@ -119,7 +130,13 @@ require 'connect-to-db.php';
 
             let ingredients = document.createElement('p');
             ingredients.classList.add("ingredients");
-            ingredients.innerHTML = "ingredients: <br>" + recipes.ingredientLines;
+            ingredients.innerHTML = "Ingredients: <br>";
+                let il = recipes.ingredientLines;
+                for (i = 0; i < il.length; i++) {
+                    //console.log(il[i]);
+                    ingredients.innerHTML = ingredients.innerHTML + il[i] + "<br>";
+                }
+            //ingredients.innerHTML = "ingredients: <br>" + recipes.ingredientLines;
             E.appendChild(ingredients);
 
 
@@ -127,58 +144,14 @@ require 'connect-to-db.php';
                 console.log(url);
             let instructions = document.createElement('p');
             instructions.classList.add('instructions');
-            instructions.innerHTML = 'To view the original recipe please visit <a href="' + url + '"> the recipe creators website</a>.'
+            instructions.innerHTML = 'To view the original recipe please visit <a href="' + url + '"> the recipe creator\'s website</a>.'
                     E.appendChild(instructions);
-     
-
-
-
-
-
-
-
-
-
-
-
 
         }
-
-
-
-
     }
-getRecipes()
 
-
-
-
-/*
-
-fetch("https://edamam-recipe-search.p.rapidapi.com/search?q=chicken", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "f8cbcb031fmsh979210ec5d6e31ep1ffebajsn419b34dc4aac",
-		"x-rapidapi-host": "edamam-recipe-search.p.rapidapi.com"
-	}
-})
-
-.then(response => {
-	response = response.json();
-    console.log(response);
-    console.log(response.Promise);
-})
-
-.catch(err => {
-	console.error(err);
-})
-/*
-    let recipes = response.json().hits;
-    for (x in recipes) {
-    console.log(recipes[x].recipe.ingredientLines);
-    }
-*/
 </script>
+
 </body>
 
 </html>
