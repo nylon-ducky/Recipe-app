@@ -64,6 +64,97 @@ require 'connect-to-db.php';
     </div>
 
     <script>    
+
+    async function getRecipes() {
+
+        let search = "chicken";
+        const edamam = "https://edamam-recipe-search.p.rapidapi.com/search?q=" + search;
+        const methodhead = {
+	    "method": "GET",
+	    "headers": {
+		"x-rapidapi-key":"f8cbcb031fmsh979210ec5d6e31ep1ffebajsn419b34dc4aac",
+		"x-rapidapi-host": "edamam-recipe-search.p.rapidapi.com"
+	        }
+        };
+
+
+        const response = await fetch(edamam, methodhead);
+
+        const data = await response.json();
+
+        console.log(data.hits[2]);
+        console.log(data.hits);
+
+        for (x in data.hits) {
+            let E = document.createElement('div');
+            E.classList.add("recipeCard");
+            document.body.appendChild(E);
+
+
+            let recipes = data.hits[x].recipe;
+            
+
+            let title = document.createElement('h6');
+            title.classList.add("titles");
+            title.innerHTML = recipes.label;
+            E.appendChild(title);
+
+
+            let picture = new Image;
+            picture.classList.add("pics");
+            picture.src = recipes.image;
+            E.appendChild(picture);
+
+
+            let description = document.createElement('p');
+            description.classList.add("descriptions");      
+            let HL = [];
+                for (L = 0; L < recipes.healthLabels.length; L++) {
+
+                HL.push(" <br>" + recipes.healthLabels[L] );
+                }
+            description.innerHTML = "Serves: " + recipes.yield + "<br><br>" + "Suitable for those who are: " + HL;
+            E.appendChild(description);
+
+
+            let ingredients = document.createElement('p');
+            ingredients.classList.add("ingredients");
+            ingredients.innerHTML = "ingredients: <br>" + recipes.ingredientLines;
+            E.appendChild(ingredients);
+
+
+                let url = recipes.url;
+                console.log(url);
+            let instructions = document.createElement('p');
+            instructions.classList.add('instructions');
+            instructions.innerHTML = 'To view the original recipe please visit <a href="' + url + '"> the recipe creators website</a>.'
+                    E.appendChild(instructions);
+     
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+    }
+getRecipes()
+
+
+
+
+/*
+
 fetch("https://edamam-recipe-search.p.rapidapi.com/search?q=chicken", {
 	"method": "GET",
 	"headers": {
@@ -71,13 +162,22 @@ fetch("https://edamam-recipe-search.p.rapidapi.com/search?q=chicken", {
 		"x-rapidapi-host": "edamam-recipe-search.p.rapidapi.com"
 	}
 })
+
 .then(response => {
-	console.log(response.json())
-    
+	response = response.json();
+    console.log(response);
+    console.log(response.Promise);
 })
+
 .catch(err => {
 	console.error(err);
-});
+})
+/*
+    let recipes = response.json().hits;
+    for (x in recipes) {
+    console.log(recipes[x].recipe.ingredientLines);
+    }
+*/
 </script>
 </body>
 
