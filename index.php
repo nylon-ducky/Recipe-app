@@ -58,13 +58,14 @@ require 'connect-to-db.php';
     </div>
 
     <!-- RECIPES -->
-    <div class="main">
+    <div class="main" id="main">
         <?php
         include 'displayRecipes.php';
         ?>
     </div>
 
     <script>    
+
             let search = document.getElementById('sBar');
 
             search.addEventListener("keyup", function(event) {
@@ -73,8 +74,12 @@ require 'connect-to-db.php';
             getRecipes();
             }
             });
-
+let main = document.querySelector('#main');
     async function getRecipes() {
+
+        
+
+
         let search = document.getElementById('sBar').value;
 
 
@@ -98,8 +103,10 @@ require 'connect-to-db.php';
         for (x in data.hits) {
             let E = document.createElement('div');
             E.classList.add("recipeCard");
+            let maindiv = document.getElementsByClassName('main');
             document.body.appendChild(E);
-
+            //main.appendChild(E);
+            
 
             let recipes = data.hits[x].recipe;
             

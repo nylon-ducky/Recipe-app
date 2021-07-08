@@ -6,7 +6,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    margin: 0;
+    margin: auto;
     padding: 0;
     overflow-x: hidden;
 }
@@ -29,19 +29,21 @@ body {
     width: 50px;
     height: 40px;
 
-
+    display: none;
 }
 
 nav {
     display: flex;
     justify-content: space-evenly;
-    margin: 15px 0 0 0;
+    margin: auto;
 
     background-color: rgb(225,81,11);
 
     font-weight: bold;
 
     padding: 5px;
+
+    width: 860px;
 
 
 }
@@ -51,19 +53,32 @@ nav a {
 }
 
 .chef {
+    width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+
+    /*
     position: relative;
     width: 800px;
-    margin: 0;
+    margin: auto;
     float: right;
+    */
 }
 .holder {
-    width: 99.1vw;
-    height: 465px;
-    margin: 0;
+    width: 860px;
+    height: 485px;
+    margin: auto;
     background-color: rgb(225,81,11);
     border: 7px solid rgb(225,81,11);
 }
 .left {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: -480px;
+
     font-family: "Brush Script MT", cursive;
     font-weight: bold;
     font-size: 40px;
@@ -73,10 +88,20 @@ nav a {
 
 /* RECIPES */
 
+.main {
+
+    width: 90vw;
+    margin: 2vw;
+}
+
 .recipeCard {
-    margin: 4vw auto; 
-    width: 80vw;
-    height: 50vh;
+
+    display: block;
+    float: left;
+
+    margin: 2vw; 
+    width: 400px;
+    height: 500px;
     border: 2px solid black;
     font-weight: bold;
     padding: 2vw 2vw 0 2vw;
@@ -87,14 +112,15 @@ nav a {
     
     overflow: auto;
     
+    
 }
 
 
 
 .recipeCard:hover {
   box-shadow: 0 0 16px 5px grey;
-  width: 82vw;
-  height: 52vh;
+  width: 410px;
+  height: 510px;
   
   font-size: 1.2em;
 }
@@ -111,10 +137,9 @@ nav a {
 }
 
 .pics {
-    width: 24vw;
-    height: 18vw;
-    border: 1px solid black;
-    border-radius: 10px;
+    width: 280px;
+    height: 240px;
+
     display: block;
     margin: 10px auto;
 }
