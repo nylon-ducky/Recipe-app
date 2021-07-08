@@ -90,16 +90,18 @@ nav a {
 
 .main {
 
-    width: 80vw;
-    margin: 2vw 5vw;
+    width: 1285px;
+    height: max-content;
+    margin: 10px auto;
+
+ 
 }
 
 .recipeCard {
 
-    display: block;
-    float: left;
+    display: inline-block;
 
-    margin: 2vw; 
+    margin: 10px; 
     width: 400px;
     height: 500px;
     border: 2px solid black;
@@ -110,8 +112,7 @@ nav a {
     
     transition: 0.2s;
     
-    overflow: auto;
-    
+    overflow-y: scroll; 
     
 }
 
@@ -128,16 +129,108 @@ nav a {
     text-align: center;
 }
 
-.main {
-    width: fit-content;
-    margin: auto;
-}
-
 .pics {
     width: 280px;
     height: 240px;
-
     display: block;
     margin: 10px auto;
 }
 
+@media (max-width: 1284px) {
+    #searchGroup, #sBar, #sButton {
+        height: 40px;
+        font-size: 1.25em;
+    }
+
+    .chef, .holder, nav {
+        width: 100vw;
+        border: none;
+        padding: none;
+        font-size: 2em;
+    }
+    
+    .holder {
+        height: 62vw;
+    }
+
+    .left {
+        top: -450px;
+        display: none;
+    }
+
+    .main {
+        display: grid;
+        width: 100vw;
+        margin: auto;
+        padding: 0;
+        
+    }
+
+    .recipeCard {
+        width: 100vw;
+        height: max-content;
+        margin: 15px 0;
+        padding: 5vw;
+        font-size: 1.75em;
+    }
+
+    .titles {
+        font-size: 2em;
+    }
+
+    .pics {
+        width: 60vw;
+        height: 60vw;
+        margin: 2vh auto;
+    }
+}
+
+@media (max-width: 900px) {
+
+    #searchGroup, #sBar, #sButton {
+        height: 40px;
+        font-size: 1.25em;
+    }
+
+    .chef, .holder, nav {
+        width: 100vw;
+        border: none;
+        padding: none;
+        font-size: 2em;
+    }
+    
+    .holder {
+        height: 62vw;
+    }
+
+    .left {
+        top: -450px;
+        display: none;
+    }
+
+    .main {
+        display: grid;
+        width: 100vw;
+        margin: auto;
+        padding: 0;
+        
+    }
+
+    .recipeCard {
+        width: 100vw;
+        height: max-content;
+        margin: 15px 0;
+        padding: 5vw;
+        font-size: 1.75em;
+    }
+
+    .titles {
+        font-size: 2em;
+    }
+
+    .pics {
+        width: 60vw;
+        height: 60vw;
+        margin: 2vh auto;
+    }
+}

@@ -151,7 +151,7 @@ let main = document.querySelector('#main');
                 console.log(url);
             let instructions = document.createElement('p');
             instructions.classList.add('instructions');
-            instructions.innerHTML = 'To view the original recipe please visit <a href="' + url + '"> the recipe creator\'s website</a>.'
+            instructions.innerHTML = 'To view the whole recipe please visit <a href="' + url + '"> the original creator\'s website</a>.'
                     E.appendChild(instructions);
 
         }
