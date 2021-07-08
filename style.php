@@ -192,6 +192,22 @@ nav a {
         font-size: 1.25em;
     }
 
+    #searchGroup {
+        width: 98vw;
+        margin: auto;
+    }
+
+    #sBar {
+        width: 70vw;
+        margin: auto;
+    }
+
+    #sButton {
+        width: 25vw;
+        margin: auto;
+        font-size: 1em;
+    }
+
     .chef, .holder, nav {
         width: 100vw;
         border: none;
