@@ -90,8 +90,8 @@ nav a {
 
 .main {
 
-    width: 90vw;
-    margin: 2vw;
+    width: 80vw;
+    margin: 2vw 5vw;
 }
 
 .recipeCard {
@@ -119,9 +119,6 @@ nav a {
 
 .recipeCard:hover {
   box-shadow: 0 0 16px 5px grey;
-  width: 410px;
-  height: 510px;
-  
   font-size: 1.2em;
 }
 

@@ -103,9 +103,9 @@ let main = document.querySelector('#main');
         for (x in data.hits) {
             let E = document.createElement('div');
             E.classList.add("recipeCard");
-            let maindiv = document.getElementsByClassName('main');
-            document.body.appendChild(E);
-            //main.appendChild(E);
+            //let main= document.getElementsByClassName('main');
+            //document.body.appendChild(E);
+            main.appendChild(E);
             
 
             let recipes = data.hits[x].recipe;
