@@ -26,4 +26,4 @@ Overall, it was an enlightening experience and somewhat productive in it's self.
 I'm very excited to start an accessibility centered project. I'm not sure exactly what it'll be yet, but I know where I'm going to start!
 
 
-
+I wound up turning this into a recipe app because I looked at some recipe apps that were totally unaccessible. so the original vision kind of got lost, but it was still a pretty cool project to build.
