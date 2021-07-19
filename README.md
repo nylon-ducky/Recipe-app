@@ -1,4 +1,5 @@
-# a11y
+I wound up turning this into a recipe app because I looked at some recipe apps that were totally unaccessible. so the original vision kind of got lost, but it was still a pretty cool project to build.
+
 I'm currently learning more and more about accessibility and wanted to start a new project where accessibility is the main focus.
 
 Today I committed myself to using a screen reader on all my devices for some amount of time. I made it 3 and a half hours. 
